@@ -126,21 +126,19 @@ body {
 /* Experience Section */
 .experience-section {
     background-color: #1a2332;
-    padding: 40px 20px 80px;
+    padding: 60px 40px 80px;
 }
 
 .experience-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 60px;
+    padding: 0 60px;
 }
 
 .experience-container h2 {
     font-size: 28px;
     font-weight: 600;
-    color: #1a2332;
+    color: white;
     margin-bottom: 50px;
     letter-spacing: 1px;
 }
@@ -153,8 +151,11 @@ body {
     display: grid;
     grid-template-columns: 280px 60px 1fr;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     position: relative;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
 }
 
 .job-row:last-child {
@@ -210,10 +211,10 @@ body {
 }
 
 .job-details {
-    background-color: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid #1a2332;
+    background-color: white;
+    padding: 0;
+    border-radius: 0;
+    border-left: none;
 }
 
 .job-details ul {
@@ -266,13 +267,16 @@ body {
     }
 
     .experience-container {
-        padding: 40px 30px;
+        padding: 0 30px;
     }
 }
 
 @media (max-width: 600px) {
-    .profile-container,
-    .experience-container {
+    .profile-container {
+        padding: 30px 20px;
+    }
+    
+    .job-row {
         padding: 30px 20px;
     }
 
@@ -286,6 +290,10 @@ body {
     }
 
     .job-details {
-        padding: 20px;
+        padding: 0;
+    }
+    
+    .experience-container {
+        padding: 0 20px;
     }
 }
