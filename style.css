@@ -123,6 +123,27 @@ body {
     line-height: 1.8;
 }
 
+.interest-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.interest-list li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.interest-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1a2332;
+    font-weight: bold;
+}
+
 /* Experience Section */
 .experience-section {
     background-color: #1a2332;
@@ -244,6 +265,230 @@ body {
     margin-bottom: 0;
 }
 
+/* Skills Section */
+.skills-section {
+    background-color: #1a2332;
+    padding: 0 40px 60px;
+}
+
+.skills-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.skills-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.skills-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.skill-category h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 10px;
+}
+
+.skill-category p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #1a2332;
+    padding: 0 40px 60px;
+}
+
+.projects-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.projects-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 10px;
+}
+
+.project-year {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tech span {
+    background-color: #1a2332;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Certifications Section */
+.certifications-section {
+    background-color: #1a2332;
+    padding: 0 40px 60px;
+}
+
+.certifications-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.certifications-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.cert-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.cert-item {
+    margin-bottom: 30px;
+}
+
+.cert-item:last-child {
+    margin-bottom: 0;
+}
+
+.cert-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 8px;
+}
+
+.cert-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Leadership Section */
+.leadership-section {
+    background-color: #1a2332;
+    padding: 0 40px 80px;
+}
+
+.leadership-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.leadership-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.leadership-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.leadership-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a2332;
+    margin-bottom: 8px;
+}
+
+.leadership-item .date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.leadership-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.leadership-item li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.leadership-item li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #1a2332;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.leadership-item li:last-child {
+    margin-bottom: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .profile-container {
@@ -266,8 +511,20 @@ body {
         display: none;
     }
 
-    .experience-container {
+    .experience-container,
+    .skills-container,
+    .projects-container,
+    .certifications-container,
+    .leadership-container {
         padding: 0 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-wrapper {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -276,7 +533,11 @@ body {
         padding: 30px 20px;
     }
     
-    .job-row {
+    .job-row,
+    .skills-box,
+    .project-card,
+    .cert-box,
+    .leadership-box {
         padding: 30px 20px;
     }
 
@@ -289,11 +550,11 @@ body {
         font-size: 24px;
     }
 
-    .job-details {
-        padding: 0;
-    }
-    
-    .experience-container {
+    .experience-container,
+    .skills-container,
+    .projects-container,
+    .certifications-container,
+    .leadership-container {
         padding: 0 20px;
     }
 }
