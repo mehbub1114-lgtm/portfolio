@@ -285,42 +285,28 @@ body {
     letter-spacing: 1px;
 }
 
-.skills-timeline {
-    position: relative;
-}
-
-.skill-row {
-    display: grid;
-    grid-template-columns: 280px 60px 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
-    position: relative;
+.skills-box {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
 }
 
-.skill-row:last-child {
+.skill-category {
+    margin-bottom: 30px;
+}
+
+.skill-category:last-child {
     margin-bottom: 0;
 }
 
-.skill-row:last-child .timeline-line {
-    display: none;
-}
-
-.skill-title h3 {
-    font-size: 20px;
+.skill-category h3 {
+    font-size: 18px;
     font-weight: 600;
     color: #1a2332;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.skill-details {
-    background-color: white;
-    padding: 0;
-}
-
-.skill-details p {
+.skill-category p {
     font-size: 14px;
     color: #555;
     line-height: 1.7;
@@ -346,52 +332,33 @@ body {
     letter-spacing: 1px;
 }
 
-.projects-timeline {
-    position: relative;
-}
-
-.project-row {
-    display: grid;
-    grid-template-columns: 280px 60px 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
-    position: relative;
+.projects-box {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-.project-row:last-child {
-    margin-bottom: 0;
-}
-
-.project-row:last-child .timeline-line {
-    display: none;
-}
-
-.project-title h3 {
+.project-card h3 {
     font-size: 20px;
     font-weight: 600;
     color: #1a2332;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.project-title .date {
+.project-year {
     font-size: 14px;
     color: #999;
-    font-weight: 400;
+    margin-bottom: 15px;
 }
 
-.project-details {
-    background-color: white;
-    padding: 0;
-}
-
-.project-details p {
+.project-card p {
     font-size: 14px;
     color: #555;
     line-height: 1.7;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .project-tech {
@@ -429,51 +396,30 @@ body {
     letter-spacing: 1px;
 }
 
-.certifications-timeline {
-    position: relative;
-}
-
-.cert-row {
-    display: grid;
-    grid-template-columns: 280px 60px 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
-    position: relative;
+.cert-box {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
 }
 
-.cert-row:last-child {
+.cert-item {
+    margin-bottom: 30px;
+}
+
+.cert-item:last-child {
     margin-bottom: 0;
 }
 
-.cert-row:last-child .timeline-line {
-    display: none;
-}
-
-.cert-title h3 {
-    font-size: 20px;
+.cert-item h3 {
+    font-size: 18px;
     font-weight: 600;
     color: #1a2332;
     margin-bottom: 8px;
 }
 
-.cert-title .date {
+.cert-item p {
     font-size: 14px;
-    color: #999;
-    font-weight: 400;
-}
-
-.cert-details {
-    background-color: white;
-    padding: 0;
-}
-
-.cert-details p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
+    color: #666;
 }
 
 /* Leadership Section */
@@ -496,60 +442,31 @@ body {
     letter-spacing: 1px;
 }
 
-.leadership-timeline {
-    position: relative;
-}
-
-.leadership-row {
-    display: grid;
-    grid-template-columns: 280px 60px 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
-    position: relative;
+.leadership-box {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
 }
 
-.leadership-row:last-child {
-    margin-bottom: 0;
-}
-
-.leadership-row:last-child .timeline-line {
-    display: none;
-}
-
-.leadership-title h3 {
+.leadership-item h3 {
     font-size: 20px;
     font-weight: 600;
     color: #1a2332;
     margin-bottom: 8px;
 }
 
-.leadership-title .company {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.leadership-title .date {
+.leadership-item .date {
     font-size: 14px;
     color: #999;
-    font-weight: 400;
+    margin-bottom: 15px;
 }
 
-.leadership-details {
-    background-color: white;
-    padding: 0;
-}
-
-.leadership-details ul {
+.leadership-item ul {
     list-style: none;
     padding-left: 0;
 }
 
-.leadership-details li {
+.leadership-item li {
     font-size: 14px;
     color: #555;
     margin-bottom: 12px;
@@ -558,7 +475,7 @@ body {
     line-height: 1.7;
 }
 
-.leadership-details li:before {
+.leadership-item li:before {
     content: "▹";
     position: absolute;
     left: 0;
@@ -567,7 +484,7 @@ body {
     font-size: 18px;
 }
 
-.leadership-details li:last-child {
+.leadership-item li:last-child {
     margin-bottom: 0;
 }
 
@@ -584,11 +501,7 @@ body {
         gap: 30px;
     }
 
-    .job-row,
-    .skill-row,
-    .project-row,
-    .cert-row,
-    .leadership-row {
+    .job-row {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -604,6 +517,10 @@ body {
     .leadership-container {
         padding: 0 30px;
     }
+
+    .projects-box {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
@@ -612,10 +529,10 @@ body {
     }
     
     .job-row,
-    .skill-row,
-    .project-row,
-    .cert-row,
-    .leadership-row {
+    .skills-box,
+    .projects-box,
+    .cert-box,
+    .leadership-box {
         padding: 30px 20px;
     }
 
