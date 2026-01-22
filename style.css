@@ -1,560 +1,343 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #1a2332;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Profile Section */
-.profile-section {
-    background-color: #1a2332;
-    padding: 60px 20px;
-}
-
-.profile-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 10px;
-    padding: 60px;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 60px;
-}
-
-.profile-left {
-    text-align: center;
-}
-
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #1a2332;
-}
-
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-left h1 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 10px;
-}
-
-.profile-left .title {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-    font-weight: 400;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    width: 45px;
-    height: 45px;
-    background-color: #1a2332;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    background-color: #2a3f5f;
-}
-
-.profile-right h2 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #1a2332;
-}
-
-.bio-text {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 1.8;
-}
-
-.info-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.column h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 15px;
-}
-
-.column p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.8;
-}
-
-.interest-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.interest-list li {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 8px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.interest-list li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #1a2332;
-    font-weight: bold;
-}
-
-/* Experience Section */
-.experience-section {
-    background-color: #1a2332;
-    padding: 60px 40px 80px;
-}
-
-.experience-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.experience-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.timeline {
-    position: relative;
-}
-
-.job-row {
-    display: grid;
-    grid-template-columns: 280px 60px 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
-    position: relative;
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.job-row:last-child {
-    margin-bottom: 0;
-}
-
-.job-title h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 8px;
-}
-
-.job-title .company {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.job-title .date {
-    font-size: 14px;
-    color: #999;
-    font-weight: 400;
-}
-
-.timeline-connector {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.timeline-dot {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 3px solid #1a2332;
-    border-radius: 50%;
-    z-index: 2;
-    margin-top: 5px;
-}
-
-.timeline-line {
-    width: 3px;
-    flex-grow: 1;
-    background-color: #1a2332;
-    margin-top: -3px;
-}
-
-.job-row:last-child .timeline-line {
-    display: none;
-}
-
-.job-details {
-    background-color: white;
-    padding: 0;
-    border-radius: 0;
-    border-left: none;
-}
-
-.job-details ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.job-details li {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
-    line-height: 1.7;
-}
-
-.job-details li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: #1a2332;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.job-details li:last-child {
-    margin-bottom: 0;
-}
-
-/* Skills Section */
-.skills-section {
-    background-color: #1a2332;
-    padding: 0 40px 60px;
-}
-
-.skills-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.skills-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.skills-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.skill-category h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 10px;
-}
-
-.skill-category p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-}
-
-/* Projects Section */
-.projects-section {
-    background-color: #1a2332;
-    padding: 0 40px 60px;
-}
-
-.projects-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.projects-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.projects-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.project-card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.project-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 10px;
-}
-
-.project-year {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-.project-card p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.project-tech {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.project-tech span {
-    background-color: #1a2332;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-/* Certifications Section */
-.certifications-section {
-    background-color: #1a2332;
-    padding: 0 40px 60px;
-}
-
-.certifications-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.certifications-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.cert-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.cert-item {
-    margin-bottom: 30px;
-}
-
-.cert-item:last-child {
-    margin-bottom: 0;
-}
-
-.cert-item h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 8px;
-}
-
-.cert-item p {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Leadership Section */
-.leadership-section {
-    background-color: #1a2332;
-    padding: 0 40px 80px;
-}
-
-.leadership-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-.leadership-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
-}
-
-.leadership-box {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-.leadership-item h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a2332;
-    margin-bottom: 8px;
-}
-
-.leadership-item .date {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-.leadership-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.leadership-item li {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 12px;
-    padding-left: 25px;
-    position: relative;
-    line-height: 1.7;
-}
-
-.leadership-item li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: #1a2332;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.leadership-item li:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 968px) {
-    .profile-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px;
-    }
-
-    .info-columns {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .job-row {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .timeline-connector {
-        display: none;
-    }
-
-    .experience-container,
-    .skills-container,
-    .projects-container,
-    .certifications-container,
-    .leadership-container {
-        padding: 0 30px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .projects-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .profile-container {
-        padding: 30px 20px;
-    }
-    
-    .job-row,
-    .skills-box,
-    .project-card,
-    .cert-box,
-    .leadership-box {
-        padding: 30px 20px;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .profile-left h1 {
-        font-size: 24px;
-    }
-
-    .experience-container,
-    .skills-container,
-    .projects-container,
-    .certifications-container,
-    .leadership-container {
-        padding: 0 20px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehboob Karim - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Profile Section - Everything in ONE white box -->
+    <section class="profile-section">
+        <div class="profile-container">
+            <!-- Left Column: Photo, Name, Title, Icons -->
+            <div class="profile-left">
+                <div class="profile-photo">
+                    <img src="images/1754345374754.jpeg" alt="Mehboob Karim">
+                </div>
+                <h1>Mehboob Karim</h1>
+                <p class="title">Technical Deployment & Systems Support</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mehboob-karim/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:Mehboob.karim@outlook.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="Mehboob_Karim_Master_Resume_docx.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Column: Biography, Interests, Education -->
+            <div class="profile-right">
+                <h2>Biography</h2>
+                <p class="bio-text">
+                    Mehboob Karim is a Technical Deployment & Systems Specialist with experience supporting 300+ Electric Utilities, having architected and built Oracle Cloud Infrastructure (OCI) Linux servers focusing on Infrastructure-as-a-Service. With 4+ years of experience managing mission-critical utility and IoT infrastructure in production environments across North America, he brings proven expertise in large-scale cloud transformation, Oracle Cloud Infrastructure migrations, Linux administration, Oracle database management, and RF/IP networking. His technical capabilities include customer-facing solutions, API-driven deployments, and automation scripting using Bash and Python. Mehboob is OCI Certified and holds a Bachelor's degree in Electrical Engineering with a specialization in Smart Grid.
+                </p>
+                
+                <div class="info-columns">
+                    <div class="column">
+                        <h3>Interests</h3>
+                        <ul class="interest-list">
+                            <li>Cloud Infrastructure & DevOps</li>
+                            <li>Automation & Scripting</li>
+                            <li>Full-Stack Development</li>
+                            <li>Smart Grid Technology</li>
+                            <li>Community Building</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Education</h3>
+                        <p><strong>Bachelor of Electrical Engineering</strong><br>
+                        <em>Smart Grid Specialization</em><br>
+                        University of Ontario Institute of Technology (UOIT)<br>
+                        May 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="experience-section">
+        <div class="experience-container">
+            <h2>WORK EXPERIENCE</h2>
+            
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="job-row">
+                    <div class="job-title">
+                        <h3>Deployment Specialist</h3>
+                        <p class="company">Tantalus Systems</p>
+                        <p class="date">Sep 2024 - Present</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>Primary architect partnering with Electric Utilities across North America to deploy and build Linux servers (troubleshooting, supporting and implementing) including cloud architectures and advising best networking security practices to protect their data.</li>
+                            <li>Architected and built Oracle Cloud Infrastructure (OCI) Linux servers focusing on Infrastructure-as-a-Service for 300+ Electric Utilities across North America.</li>
+                            <li>Collaboration with IT contractors to configure and build VPN tunnels on Oracle, integrating with enterprise firewall platforms including SonicWall, Fortinet, Palo Alto Networks, and Cisco ASA for secure site-to-site connectivity.</li>
+                            <li>Led enterprise cloud migration initiative, successfully migrating 150+ customer servers from on-premise and legacy cloud facilities to Oracle Cloud Infrastructure in 4 months with 100% success rate, zero data loss, and zero downtime.</li>
+                            <li>Develop and maintain Python and Bash automation tooling, reducing deployment tasks from 1-2 hours to 5-10 minutes and reducing manual intervention by 40%, improving response times.</li>
+                            <li>Administer Oracle database environments including Oracle database architecture, schema optimization, query tuning, backup/recovery, and data integrity validation.</li>
+                            <li>Manage 200+ VMs across OCI, VMware ESXi, and Hyper-V with container networking configurations, supporting critical utility operations.</li>
+                            <li>Delivered $2M in revenue completing cloud infrastructure builds ahead of quarterly deadlines for 5-10 new customer onboardings.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-row">
+                    <div class="job-title">
+                        <h3>Technical Support Specialist</h3>
+                        <p class="company">Tantalus Systems</p>
+                        <p class="date">Sep 2021 - Sep 2024</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>Supported 200+ customers across cloud systems and Linux infrastructure, maintaining 100% adherence to 4-hour SLA.</li>
+                            <li>Performed Linux command-line troubleshooting and diagnostics including log analysis, process monitoring, and network debugging.</li>
+                            <li>Executed software upgrades, security patches, and configuration changes across cloud production customer environments.</li>
+                            <li>Developed and performed Python and Bash scripts for system automation and integration tasks.</li>
+                            <li>Configured billing export integrations between TUNet platform and utility customer billing systems.</li>
+                            <li>Authored 50 knowledge base articles and contributed to internal documentation, improving team efficiency and reducing repeat incidents.</li>
+                            <li>Managed support ticket lifecycle using Salesforce ticketing and issue reporting systems, ensuring proper case tracking and resolution.</li>
+                            <li>Provided 24/7/365 support and monitoring on Oracle Databases and customer VMs using email alerts from SMTP servers.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-row">
+                    <div class="job-title">
+                        <h3>Technical Support Intern</h3>
+                        <p class="company">Tantalus Systems</p>
+                        <p class="date">Sep 2020 - Sep 2021</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="job-details">
+                        <ul>
+                            <li>Diagnosed and resolved technical issues spanning embedded systems, RF/IP networks, Oracle databases, and Linux servers.</li>
+                            <li>Collaborated with internal teams to build and validate test environments for customer solution deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="skills-container">
+            <h2>TECHNICAL SKILLS</h2>
+            
+            <div class="skills-timeline">
+                <!-- Skill Category 1 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>Oracle Cloud Infrastructure, VMware ESXi, Hyper-V, Load Balancing, Auto-Scaling, Virtual Machine Management</p>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Programming & Scripting</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>Python, Bash, JavaScript, HTML, API Integration, Shell Scripting, Automation Tooling Development & Maintenance</p>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Databases & Data Management</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>Oracle Database Architecture, SQL, Backup/Recovery, Database Administration, Schema Optimization, Query Tuning, Data Integrity Validation, Billing Exports Configuration & Maintenance</p>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Networking</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>TCP/IP, Firewalls, IPSec, VPN, DNS, SSH, FTP, SFTP, SSL Certificates, RF Mesh Networks, Docker Container Networking, Network Debugging</p>
+                    </div>
+                </div>
+
+                <!-- Skill Category 5 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Operating Systems</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>Linux (RHEL/CentOS), Unix Command Line, Log Analysis, Process Monitoring</p>
+                    </div>
+                </div>
+
+                <!-- Skill Category 6 -->
+                <div class="skill-row">
+                    <div class="skill-title">
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="skill-details">
+                        <p>Git, JIRA, Confluence, Salesforce, System Dashboards, Monitoring Tools, Ticketing Systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="projects-container">
+            <h2>PROJECTS</h2>
+            
+            <div class="projects-timeline">
+                <!-- Project 1 -->
+                <div class="project-row">
+                    <div class="project-title">
+                        <h3>Sports League Management Platform</h3>
+                        <p class="date">2026</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="project-details">
+                        <p>Built full-stack web application with React frontend and PostgreSQL backend to manage community sports league data.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>PostgreSQL</span>
+                            <span>Full-Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-row">
+                    <div class="project-title">
+                        <h3>Decor E-Commerce Website</h3>
+                        <p class="date">2026</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="project-details">
+                        <p>Built a responsive e-commerce website with Stripe payment integration and automated order notifications.</p>
+                        <div class="project-tech">
+                            <span>E-Commerce</span>
+                            <span>Stripe</span>
+                            <span>Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="certifications-container">
+            <h2>CERTIFICATIONS</h2>
+            
+            <div class="certifications-timeline">
+                <!-- Cert 1 -->
+                <div class="cert-row">
+                    <div class="cert-title">
+                        <h3>Oracle Cloud Infrastructure Foundations Associate</h3>
+                        <p class="date">2023</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="cert-details">
+                        <p>Oracle</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-row">
+                    <div class="cert-title">
+                        <h3>OGL Project Management Certified Foundations Associate</h3>
+                        <p class="date">2025</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="cert-details">
+                        <p>Oracle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="leadership-container">
+            <h2>LEADERSHIP & COMMUNITY</h2>
+            
+            <div class="leadership-timeline">
+                <!-- Leadership Item -->
+                <div class="leadership-row">
+                    <div class="leadership-title">
+                        <h3>Founder & Organizer</h3>
+                        <p class="company">Spirit of Cricket Community</p>
+                        <p class="date">2024</p>
+                    </div>
+                    <div class="timeline-connector">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="leadership-details">
+                        <ul>
+                            <li>Established and scaled community sports league from zero to 50+ active participants, managing P&L, vendor contracts, and multi-venue logistics.</li>
+                            <li>Coordinated cross-functional operations including scheduling, communications, conflict resolution, and event execution under tight timelines.</li>
+                            <li>Demonstrated project management and stakeholder coordination skills transferable to technical deployment and implementation projects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
